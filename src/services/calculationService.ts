@@ -23,6 +23,7 @@ export function calcolaRitenuta(input: RitenutaInput): RitenutaResult {
     rimborso,
     totaleRitenuta,
 	totale,
+	lordo,
   };
 }
 

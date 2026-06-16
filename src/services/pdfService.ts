@@ -256,9 +256,12 @@ export async function generaRitenutaPdf(data: RitenutaPdfData): Promise<Blob> {
 
   const pdfBytes = await pdfDoc.save();
 
-  return new Blob([pdfBytes], {
-    type: "application/pdf",
-  });
+	const pdfArrayBuffer = new ArrayBuffer(pdfBytes.byteLength);
+	new Uint8Array(pdfArrayBuffer).set(pdfBytes);
+
+	return new Blob([pdfArrayBuffer], {
+	  type: "application/pdf",
+	});
 }
 
 export function downloadPdf(blob: Blob, fileName: string): void {

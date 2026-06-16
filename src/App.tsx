@@ -100,10 +100,6 @@ function App() {
       <section className="card">
         <h1>Calcolo ritenuta d&apos;acconto</h1>
 
-        <p className="subtitle">
-          Inserisci i dati per calcolare lordo, ritenuta e netto.
-        </p>
-
         <div className="form">
           <label>
 			  Cognome e nome
